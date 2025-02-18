@@ -1,0 +1,11 @@
+{
+  "appTitle": "To-Do List",
+  "addTaskHint": "Add a new task",
+  "delete": "Delete",
+  "language": "Language",
+  "english": "English",
+  "spanish": "Spanish",
+  "portuguese": "Portuguese",
+  "buy_me_a_coffee": "Buy me a coffee"
+
+}

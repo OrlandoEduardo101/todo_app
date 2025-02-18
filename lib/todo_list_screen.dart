@@ -25,10 +25,10 @@ class _TodoListScreenState extends State<TodoListScreen> {
 
   void _openPicPay() async {
     final Uri url = Uri.parse(picpayUrl);
-    var bool = await canLaunchUrl(url);
-    if (bool) {
+
+    try {
       await launchUrl(url, mode: LaunchMode.externalApplication);
-    } else {
+    } catch (e) {
       debugPrint("Não foi possível abrir o link");
     }
   }

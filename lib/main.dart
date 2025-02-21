@@ -4,8 +4,10 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Importe as traduções geradas
-import 'todo_list_screen.dart';
+import 'theme/theme_notifier.dart';
+import 'todo/todo_list_screen.dart';
 
+final ThemeNotifier themeNotifier = ThemeNotifier();
 void main() {
   runApp(MyApp());
 }
@@ -20,16 +22,23 @@ class MyApp extends StatelessWidget {
       log(defaultLocale, name: 'defaultLocale');
       changeLocale(Locale(defaultLocale.split('_').first));
     }
+
+    themeNotifier.loadTheme();
     return ListenableBuilder(
-        listenable: localeNotifier,
+        listenable: themeNotifier,
         builder: (context, _) {
-          return MaterialApp(
-            title: 'To Do',
-            locale: localeNotifier.value,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            home: TodoListScreen(),
-          );
+          return ListenableBuilder(
+              listenable: localeNotifier,
+              builder: (context, _) {
+                return MaterialApp(
+                  title: 'To Do',
+                  theme: themeNotifier.isDarkMode ? ThemeData.dark() : ThemeData.light(),
+                  locale: localeNotifier.value,
+                  localizationsDelegates: AppLocalizations.localizationsDelegates,
+                  supportedLocales: AppLocalizations.supportedLocales,
+                  home: TodoListScreen(),
+                );
+              });
         });
   }
 }

@@ -1,11 +1,22 @@
 {
   "appTitle": "To-Do List",
+  "addTask": "Add Task",
   "addTaskHint": "Add a new task",
   "delete": "Delete",
+  "cancel": "Cancel",
+  "add": "Add",
   "language": "Language",
   "english": "English",
   "spanish": "Spanish",
   "portuguese": "Portuguese",
-  "buy_me_a_coffee": "Buy me a coffee"
-
+  "buy_me_a_coffee": "Buy me a coffee",
+  "category": "Category",
+  "priority": "Priority",
+  "general": "General",
+  "work": "Work",
+  "personal": "Personal",
+  "shopping": "Shopping",
+  "low": "Low",
+  "medium": "Medium",
+  "high": "High"
 }

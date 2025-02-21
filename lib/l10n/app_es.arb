@@ -1,10 +1,22 @@
 {
   "appTitle": "Lista de Tareas",
-  "addTaskHint": "Agregar una nueva tarea",
+  "addTask": "Añadir tarea",
+  "addTaskHint": "Añade una nueva tarea",
   "delete": "Eliminar",
+  "cancel": "Cancelar",
+  "add": "Añadir",
   "language": "Idioma",
   "english": "Inglés",
   "spanish": "Español",
   "portuguese": "Portugués",
-  "buy_me_a_coffee": "Invítame a un café"
+  "buy_me_a_coffee": "Cómprame un café",
+  "category": "Categoría",
+  "priority": "Prioridad",
+  "general": "General",
+  "work": "Trabajo",
+  "personal": "Personal",
+  "shopping": "Compras",
+  "low": "Baja",
+  "medium": "Media",
+  "high": "Alta"
 }

@@ -1,10 +1,22 @@
 {
   "appTitle": "Lista de Tarefas",
-  "addTaskHint": "Adicionar uma nova tarefa",
+  "addTask": "Adicionar Tarefa",
+  "addTaskHint": "Adicione uma nova tarefa",
   "delete": "Excluir",
+  "cancel": "Cancelar",
+  "add": "Adicionar",
   "language": "Idioma",
   "english": "Inglês",
   "spanish": "Espanhol",
   "portuguese": "Português",
-  "buy_me_a_coffee": "Me pague um café"
+  "buy_me_a_coffee": "Me compre um café",
+  "category": "Categoria",
+  "priority": "Prioridade",
+  "general": "Geral",
+  "work": "Trabalho",
+  "personal": "Pessoal",
+  "shopping": "Compras",
+  "low": "Baixa",
+  "medium": "Média",
+  "high": "Alta"
 }

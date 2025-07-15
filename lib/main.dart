@@ -3,11 +3,12 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Importe as traduções geradas
+import 'package:todo_app/l10n/app_localizations.dart';
 import 'theme/theme_notifier.dart';
 import 'todo/todo_list_screen.dart';
 
 final ThemeNotifier themeNotifier = ThemeNotifier();
+
 void main() {
   runApp(MyApp());
 }
@@ -23,7 +24,11 @@ class MyApp extends StatelessWidget {
       changeLocale(Locale(defaultLocale.split('_').first));
     }
 
-    themeNotifier.loadTheme();
+    // Carregar o tema apenas uma vez
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      themeNotifier.loadTheme();
+    });
+
     return ListenableBuilder(
         listenable: themeNotifier,
         builder: (context, _) {

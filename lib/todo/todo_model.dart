@@ -7,7 +7,7 @@ class Todo {
   Todo({
     required this.title,
     this.isCompleted = false,
-    this.category = "Geral",
+    this.category = "General",
     this.priority = "Medium",
   });
 
